@@ -17,15 +17,20 @@
 @import "bootstrap";
 
 $font: 'Times New Roman', 'Times', serif;
-$color: #FFFFFF;
+$color: #fdfbd1;
 
 body {
   font-family: $font;
-  background-color: $color;
+  background-image: url(/assets/wallpapertip_google-4k-wallpaper_1817039.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
   margin: 10px;
   padding: 10px;
 }
 
 h1 {
+  color: #0d7900;
   text-transform: uppercase;
+  font-family: Luminia;
+  font-style: italic;
 }
