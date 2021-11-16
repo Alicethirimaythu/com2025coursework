@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: Plantopia
+  app_description: We sell all the plants you wish to have in your lovely home.
+
+  home:
+    home:
+      title: Plantopia
+      welcome: Welcome to Plantopia! A place where we sell any plants you desire.
