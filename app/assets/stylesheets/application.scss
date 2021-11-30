@@ -17,7 +17,7 @@
 @import "bootstrap";
 
 $font: 'Times New Roman', 'Times', serif;
-$color: #fdfbd1;
+$color: #0d7900;
 
 body {
   font-family: $font;
@@ -29,8 +29,41 @@ body {
 }
 
 h1 {
-  color: #0d7900;
+  color: $color;
   text-transform: uppercase;
   font-family: Luminia;
   font-style: italic;
+}
+nav{
+  background: #fff;
+  .navbar{
+    position: sticky;
+    height: 50px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  img{
+    height: auto;
+    width: 100px;
+    max-height: 50px;
+    box-shadow: 0px 0px;
+  }
+  a{
+    &.navbar-brand{
+      padding: 0px 0px;
+    }
+  }
+  ul{
+    list-style-type: none;
+    li{
+      display: flex;
+      padding: 0px 10px;
+      a:hover{
+        color: $color;
+      }
+      a{
+        color: #000;
+      }
+    }
+  }
 }
