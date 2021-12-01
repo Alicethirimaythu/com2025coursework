@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_01_153532) do
+ActiveRecord::Schema.define(version: 2021_12_01_161046) do
 
   create_table "plantopia", force: :cascade do |t|
     t.string "name", null: false
@@ -18,5 +18,7 @@ ActiveRecord::Schema.define(version: 2021_12_01_153532) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "plantopia", ["title"], name: "index_notes_on_name", unique: true
 
 end
