@@ -1,3 +1,18 @@
 // Place all the styles related to the Plantopia controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.plantwrapper{
+  td, th{
+    padding: 5px;
+  }
+}
+
+.show_wrapper{
+  img{
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 150px;
+    box-shadow: none;
+  }
+}

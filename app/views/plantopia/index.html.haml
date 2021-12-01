@@ -1,23 +1,24 @@
-%h1 Listing plantopia
+.plantwrapper
+  %h1 Listing Plant Entry
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th
-      %th
-      %th
-
-  %tbody
-    - @plantopia.each do |plantopium|
+  %table
+    %thead
       %tr
-        %td= plantopium.name
-        %td= plantopium.description
-        %td= link_to 'Show', plantopium
-        %td= link_to 'Edit', edit_plantopium_path(plantopium)
-        %td= link_to 'Destroy', plantopium, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Name
+        %th Description
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @plantopia.each do |plantopium|
+        %tr
+          %td= plantopium.name
+          %td= plantopium.description
+          %td= link_to 'Show', plantopium
+          %td= link_to 'Edit', edit_plantopium_path(plantopium)
+          %td= link_to 'Destroy', plantopium, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Plantopium', new_plantopium_path
+  %br
+
+  = link_to 'New Plantopium', new_plantopium_path

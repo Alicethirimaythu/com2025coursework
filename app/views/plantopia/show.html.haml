@@ -1,12 +1,20 @@
-%p#notice= notice
+.show_wrapper
+  %p#notice= notice
 
-%p
-  %b Name:
-  = @plantopium.name
-%p
-  %b Description:
-  = @plantopium.description
+  %p
+    %b Name:
+    = @plantopium.name
+  %p
+    %b Description:
+    = @plantopium.description
 
-= link_to 'Edit', edit_plantopium_path(@plantopium)
-\|
-= link_to 'Back', plantopia_path
+  %p
+    %b Plant picture:
+
+  %p
+    - if @plantopium.plantpic.attached?
+      %img{:src => url_for(@plantopium.plantpic)}/
+
+  = link_to 'Edit', edit_plantopium_path(@plantopium)
+  \|
+  = link_to 'Back', plantopia_path

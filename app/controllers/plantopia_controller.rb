@@ -64,6 +64,6 @@ class PlantopiaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plantopium_params
-      params.require(:plantopium).permit(:name, :description)
+      params.require(:plantopium).permit(:name, :description, :plantpic)
     end
 end
