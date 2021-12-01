@@ -17,7 +17,7 @@ class PlantopiaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create plantopium" do
     assert_difference('Plantopium.count') do
-      post plantopia_url, params: { plantopium: { description: @plantopium.description, name: @plantopium.name } }
+      post plantopia_url, params: { plantopium: { description: @plantopium.description, name: @plantopium.name + " create" } }
     end
 
     assert_redirected_to plantopium_url(Plantopium.last)
