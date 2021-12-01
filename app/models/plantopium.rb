@@ -1,0 +1,2 @@
+class Plantopium < ApplicationRecord
+end

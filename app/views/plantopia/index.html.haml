@@ -1,0 +1,23 @@
+%h1 Listing plantopia
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th
+      %th
+      %th
+
+  %tbody
+    - @plantopia.each do |plantopium|
+      %tr
+        %td= plantopium.name
+        %td= plantopium.description
+        %td= link_to 'Show', plantopium
+        %td= link_to 'Edit', edit_plantopium_path(plantopium)
+        %td= link_to 'Destroy', plantopium, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Plantopium', new_plantopium_path

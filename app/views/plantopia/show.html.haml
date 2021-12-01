@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @plantopium.name
+%p
+  %b Description:
+  = @plantopium.description
+
+= link_to 'Edit', edit_plantopium_path(@plantopium)
+\|
+= link_to 'Back', plantopia_path
