@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PlantopiaControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @plantopium = plantopia(:one)
+    @plantopium = plantopium(:one)
   end
 
   test "should get index" do

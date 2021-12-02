@@ -3,7 +3,7 @@ require 'test_helper'
 class DiariesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @diary = diaries(:one)
-    @plantopium = plantopia(:one)
+    @plantopium = plantopium(:one)
   end
 
   test "should get index" do

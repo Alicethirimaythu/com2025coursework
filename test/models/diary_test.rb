@@ -5,7 +5,7 @@ class DiaryTest < ActiveSupport::TestCase
   #   assert true
   # end
   setup do
-    @plantopium = plantopia(:one)
+    @plantopium = plantopium(:one)
   end
 
   test 'should not save empty diary' do
