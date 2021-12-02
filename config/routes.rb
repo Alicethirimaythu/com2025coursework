@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :diaries
   resources :plantopia
   root 'home#home'
   get 'contact', to: 'home#contact'

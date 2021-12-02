@@ -1,4 +1,5 @@
-class Plantopium < ActiveRecord::Base
+class Plantopium < ApplicationRecord
+  has_many :diaries, dependent: :destroy
   validates :name, presence: true
   validates :name, uniqueness: true
 
