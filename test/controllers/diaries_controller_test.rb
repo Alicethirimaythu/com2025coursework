@@ -1,13 +1,16 @@
 require 'test_helper'
 
 class DiariesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @diary = diaries(:one)
     @plantopium = plantopium(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
-    get diaries_url, params: {diary: {plantopia_id: @diary.id}}
+    get diaries_url
     assert_response :success
   end
 

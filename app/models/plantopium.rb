@@ -6,5 +6,5 @@ class Plantopium < ApplicationRecord
 
   belongs_to :user
 
-  scope :user_notes, ->(user) { where(['user_id = ?', user.id]) }
+  scope :user_plantopia, ->(user) { where(['user_id = ?', user.id]) }
 end
