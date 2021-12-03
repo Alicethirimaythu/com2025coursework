@@ -5,7 +5,7 @@ class DiariesController < ApplicationController
 
   # GET /diaries or /diaries.json
   def index
-    @diaries = Diary.all
+    @diaries = Diary.user_diaries(current_user)
   end
 
   # GET /diaries/1 or /diaries/1.json

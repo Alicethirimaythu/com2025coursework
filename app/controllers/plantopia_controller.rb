@@ -4,7 +4,7 @@ class PlantopiaController < ApplicationController
 
   # GET /plantopia or /plantopia.json
   def index
-    @plantopia = Plantopium.all
+    @plantopia = Plantopium.user_plantopia(current_user)
   end
 
   # GET /plantopia/1 or /plantopia/1.json
@@ -25,6 +25,7 @@ class PlantopiaController < ApplicationController
   # POST /plantopia or /plantopia.json
   def create
     @plantopium = Plantopium.new(plantopium_params)
+    @plantopium.user = current_user
 
     respond_to do |format|
       if @plantopium.save

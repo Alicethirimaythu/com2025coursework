@@ -9,3 +9,5 @@ plant1 = Plantopium.where(name: 'Red rose').first
 plant1.delete if plant1
 
 plants = Plantopium.create([name: 'Red rose', description: 'The rose is a type of flowering shrub. A red rose is an expression of love.'])
+
+user1 = User.create(email: 'dfjak@adjfl.com', password: 'password')
