@@ -1,4 +1,5 @@
 class PlantopiaController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_plantopium, only: %i[ show edit update destroy ]
 
   # GET /plantopia or /plantopia.json
