@@ -8,6 +8,8 @@ class PlantopiaController < ApplicationController
 
   # GET /plantopia/1 or /plantopia/1.json
   def show
+    #@hasdiary = not Diary.find_by(plantopia_id: @plantopium.id).nil?
+    @hasdiary = Diary.where(["plantopia_id = ?", @plantopium.id]).length >= 1
   end
 
   # GET /plantopia/new

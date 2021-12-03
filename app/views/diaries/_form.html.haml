@@ -8,7 +8,8 @@
 
   .field
     = f.label :plantopia
-    = f.text_field :plantopia
+    = f.hidden_field :plantopia_id
+    %p= @diary.plantopia.name
   .field
     = f.label :title
     = f.text_field :title

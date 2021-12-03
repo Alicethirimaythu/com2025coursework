@@ -1,5 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: %i[ show edit update destroy ]
+  before_action :set_plantopium, only: [:new, :create]
 
   # GET /diaries or /diaries.json
   def index
@@ -12,7 +13,7 @@ class DiariesController < ApplicationController
 
   # GET /diaries/new
   def new
-    @diary = Diary.new
+    @diary = @plantopium.diaries.new
   end
 
   # GET /diaries/1/edit
@@ -21,7 +22,7 @@ class DiariesController < ApplicationController
 
   # POST /diaries or /diaries.json
   def create
-    @diary = Diary.new(diary_params)
+    @diary = @plantopium.diaries.new(diary_params)
 
     respond_to do |format|
       if @diary.save
@@ -66,4 +67,9 @@ class DiariesController < ApplicationController
     def diary_params
       params.require(:diary).permit(:plantopia_id, :title)
     end
+
+    def set_plantopium
+      @plantopium = Plantopium.find_by(id: params[:plantopia_id]) || Plantopium.find(diary_params[:plantopia_id])
+    end
+
 end

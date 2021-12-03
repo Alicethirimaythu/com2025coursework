@@ -12,7 +12,7 @@ class DiariesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_diary_url
+    get new_diary_url, params: {plantopia_id: @plantopium.id}
     assert_response :success
   end
 

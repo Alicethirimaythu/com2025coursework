@@ -1,23 +1,19 @@
-%h1 Listing diaries
+.plantwrapper
+  - @diaries.each do |diary|
+    %h1= diary.plantopia.name
 
-%table
-  %thead
-    %tr
-      %th Plantopia
-      %th Title
-      %th
-      %th
-      %th
-
-  %tbody
-    - @diaries.each do |diary|
+  %table
+    %thead
       %tr
-        %td= diary.plantopia
-        %td= diary.title
-        %td= link_to 'Show', diary
-        %td= link_to 'Edit', edit_diary_path(diary)
-        %td= link_to 'Destroy', diary, method: :delete, data: { confirm: 'Are you sure?' }
+        %th The Plant diary
+        %th
+        %th
+        %th
 
-%br
-
-= link_to 'New Diary', new_diary_path
+    %tbody
+      - @diaries.each do |diary|
+        %tr
+          %td= diary.title
+          %td= link_to 'Show', diary
+          %td= link_to 'Edit', edit_diary_path(diary)
+          %td= link_to 'Destroy', diary, method: :delete, data: { confirm: 'Are you sure?' }

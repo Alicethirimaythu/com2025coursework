@@ -1,12 +1,13 @@
-%p#notice= notice
+.show_wrapper
+  %p#notice= notice
 
-%p
-  %b Plantopia:
-  = @diary.plantopia
-%p
-  %b Title:
-  = @diary.title
+  %p
+    %b Plantopia:
+    = @diary.title
+  %p
+    %b Title:
+    = @diary.plantopia.name
 
-= link_to 'Edit', edit_diary_path(@diary)
-\|
-= link_to 'Back', diaries_path
+  = link_to 'Edit', edit_diary_path(@diary)
+  \|
+  = link_to 'Back', diaries_path

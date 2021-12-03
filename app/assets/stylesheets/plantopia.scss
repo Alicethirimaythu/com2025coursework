@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .plantwrapper{
+  text-align: left;
   td, th{
     padding: 5px;
+  }
+  a{
+    font-size: 14px;
   }
 }
 
@@ -14,5 +18,12 @@
     max-width: 200px;
     max-height: 150px;
     box-shadow: none;
+  }
+}
+
+.edit_new_wrapper{
+  text-align: left;
+  .field{
+    text-align: left;
   }
 }
