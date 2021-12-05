@@ -10,15 +10,21 @@
       %a.nav-link{:href => "plantopia"} Plant Entry
     %li.nav-item
       %a.nav-link{:href => "contact"} Contact
+  %ul.nav.navbar-right
     - if user_signed_in?
-      = "#{current_user.email} |"
-      = link_to t('profile'), edit_user_registration_path
-      = '|'
-      = link_to t('logout'), destroy_user_session_path, method: 'delete'
+      %ul.nav-right
+        %li.right
+          = "#{current_user.email} "
+          = ' | '
+          = link_to t('profile'), edit_user_registration_path
+        %li.right
+          = link_to t('logout'), destroy_user_session_path, method: 'delete'
     - else
-      = link_to t('login'), new_user_session_path
-      = '|'
-      = link_to t('sign_up'), new_user_registration_path
+      %ul.nav-right
+        %li.right
+          = link_to t('login'), new_user_session_path
+        %li.right
+          = link_to t('sign_up'), new_user_registration_path
 
 - flash.each do |key, value|
   = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
