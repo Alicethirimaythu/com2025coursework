@@ -1,19 +1,19 @@
 .plantwrapper
-  - @diaries.each do |diary|
-    %h1= diary.plantopia.name
+  %h1= t('.title')
 
   %table
     %thead
       %tr
-        %th The Plant diary
-        %th
+        %th= t('.name')
+        %th= t('.contents')
         %th
         %th
 
     %tbody
       - @diaries.each do |diary|
         %tr
-          %td= diary.title
-          %td= link_to 'Show', diary
-          %td= link_to 'Edit', edit_diary_path(diary)
-          %td= link_to 'Destroy', diary, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= diary.plantopia.name
+          %td.small= diary.title
+          %td= link_to t('.show'), diary
+          %td= link_to t('.edit'), edit_diary_path(diary)
+          %td= link_to t('destroy'), diary, method: :delete, data: { confirm: 'Are you sure?' }

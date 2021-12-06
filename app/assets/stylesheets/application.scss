@@ -98,3 +98,13 @@ footer{
     padding-bottom: 0px;
   }
 }
+
+td.small{
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 30px;
+  text-overflow: ellipsis;
+}

@@ -7,13 +7,13 @@
           %li= message
 
   .field
-    = f.label "Plant picture"
+    = f.label t('.title')
     = f.file_field :plantpic
   .field
-    = f.label :name
+    = f.label :name, t('.name')
     = f.text_field :name
   .field
-    = f.label :description
+    = f.label :description, t('.description')
     = f.text_area :description
   .actions
-    = f.submit 'Save'
+    = f.submit t('.action')

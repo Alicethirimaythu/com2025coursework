@@ -1,8 +1,8 @@
 .edit_new_wrapper
-  %h1 Editing plant entry
+  %h1= t('.title')
 
   = render 'form'
 
-  = link_to 'Show', @plantopium
+  = link_to t('.show'), @plantopium
   \|
-  = link_to 'Back', plantopia_path
+  = link_to t('.back'), plantopia_path

@@ -1,3 +1,14 @@
 // Place all the styles related to the Diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.show_diary_wrapper{
+  text-align: left;
+  img{
+    float: left;
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 150px;
+    box-shadow: none;
+  }
+}

@@ -5,11 +5,11 @@
   / Links
   %ul.navbar-nav
     %li.nav-item
-      %a.nav-link{:href => "home"} Home
+      %a.nav-link{:href => "home"}= t('.home')
     %li.nav-item
-      %a.nav-link{:href => "plantopia"} Plant Entry
+      %a.nav-link{:href => "plantopia"}= t('.entry')
     %li.nav-item
-      %a.nav-link{:href => "contact"} Contact
+      %a.nav-link{:href => "contact"}= t('.contact')
   %ul.nav.navbar-right
     - if user_signed_in?
       %ul.nav-right

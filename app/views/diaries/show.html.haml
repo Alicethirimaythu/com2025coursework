@@ -1,12 +1,22 @@
-.show_wrapper
+.show_diary_wrapper
 
   %p
-    %b Plantopia:
-    = @diary.title
-  %p
-    %b Title:
-    = @diary.plantopia.name
+    %h1= @diary.plantopia.name
 
-  = link_to 'Edit', edit_diary_path(@diary)
+  %p
+    - if @diary.plantopia.plantpic.attached?
+      %img{:src => url_for(@diary.plantopia.plantpic)}/
+
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+
+  %p= @diary.title
+
+
+  = link_to t('.edit'), edit_diary_path(@diary)
   \|
-  = link_to 'Back', diaries_path
+  = link_to t('.back'), diaries_path

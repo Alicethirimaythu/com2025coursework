@@ -1,14 +1,14 @@
 .show_wrapper
 
   %p
-    %b Name:
+    %b= t('.name')
     = @plantopium.name
   %p
-    %b Description:
+    %b= t('.description')
     = @plantopium.description
 
   %p
-    %b Plant picture:
+    %b= t('.picture')
 
   %p
     - if @plantopium.plantpic.attached?
@@ -16,12 +16,12 @@
 
   %p
     - if not @hasdiary
-      = link_to 'Create Diary', new_diary_path(plantopia_id: @plantopium)
+      = link_to t('.create'), new_diary_path(plantopia_id: @plantopium)
 
   %p
     - if @hasdiary
-      = link_to 'View Diary', diaries_path
+      = link_to t('.view'), diaries_path
 
-  = link_to 'Edit', edit_plantopium_path(@plantopium)
+  = link_to t('.edit'), edit_plantopium_path(@plantopium)
   \|
-  = link_to 'Back', plantopia_path
+  = link_to t('.back'), plantopia_path

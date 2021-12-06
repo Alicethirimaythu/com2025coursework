@@ -37,6 +37,9 @@ en:
     home:
       title: Plantopia
       welcome: Welcome to Plantopia! A place where you can record you plants' growth.
+      message1: Put your plants that you planted in your garden in plant entry page and Record or comment down your own plants' growth like writing a diary,
+      message2: "A Plant Diary!"
+      message3: "This is what our app aims for!"
 
     contact:
       title: Contact Us
@@ -55,3 +58,70 @@ en:
     request_contact:
       no_email: You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
+
+  diaries:
+    form:
+      label1: "Plant Name:"
+      label2: "Diary's contents:"
+      save: Save
+
+    edit:
+      title: Editing the Diary
+      show: Show
+      back: Back
+
+    index:
+      title: The Plant Diary
+      name: Plant Name
+      contents: Diary contents
+      show: Show
+      edit: Edit
+      destroy: Destroy
+
+    new:
+      title: New Diary
+      back: Back
+
+    show:
+      edit: Edit
+      back: Back
+
+  plantopia:
+    form:
+      title: "Plant picture:"
+      name: "Name:"
+      description: "Description:"
+      action: "Save"
+
+    edit:
+      title: Editing plant entry
+      show: Show
+      back: Back
+
+    index:
+      title: List of Plant Entries
+      name: "Name:"
+      description: "Description:"
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      new: New Plant
+
+    new:
+      title: New Plant Entry
+      back: Back
+
+    show:
+      name: "Name:"
+      description: "Description:"
+      picture: "Plant picture:"
+      create: Create Diary
+      view: View Diary
+      edit: Edit
+      back: Back
+
+  shared:
+    header:
+      home: Home
+      entry: Plant Entry
+      contact: Contact

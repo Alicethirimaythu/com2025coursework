@@ -22,5 +22,5 @@ img{
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  max-width: 600px;
+  max-width: min(600px, 50vw);
 }

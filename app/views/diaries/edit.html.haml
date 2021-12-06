@@ -1,7 +1,8 @@
-%h1 Editing diary
+.edit_new_wrapper
+  %h1= t('.title')
 
-= render 'form'
+  = render 'form'
 
-= link_to 'Show', @diary
-\|
-= link_to 'Back', diaries_path
+  = link_to t('.edit'), @diary
+  \|
+  = link_to t('.back'), diaries_path
